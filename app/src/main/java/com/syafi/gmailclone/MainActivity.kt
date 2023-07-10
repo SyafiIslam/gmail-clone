@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.syafi.gmailclone.presentation.BottomNav.BottomNav
 import com.syafi.gmailclone.presentation.DrawerMenu
 import com.syafi.gmailclone.presentation.TopBar
 import com.syafi.gmailclone.ui.theme.GmailCloneTheme
@@ -43,7 +44,8 @@ fun App() {
     Scaffold(
         scaffoldState = scaffoldState,
         topBar = { TopBar(scaffoldState, scope) },
-        drawerContent = { DrawerMenu(scroll) }
+        drawerContent = { DrawerMenu(scroll, scaffoldState, scope) },
+        bottomBar = { BottomNav() }
     ) {
         Box(modifier = Modifier.padding(it))
     }

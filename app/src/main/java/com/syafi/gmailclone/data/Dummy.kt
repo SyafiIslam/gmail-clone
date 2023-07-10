@@ -1,10 +1,9 @@
 package com.syafi.gmailclone.data
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AddCircle
-import androidx.compose.material.icons.filled.BookOnline
-import androidx.compose.material.icons.filled.NotificationsActive
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.outlined.*
+import com.syafi.gmailclone.model.BottomNavData
 import com.syafi.gmailclone.model.DrawerMenuData
 
 val drawerList = listOf<DrawerMenuData>(
@@ -99,5 +98,28 @@ val drawerList = listOf<DrawerMenuData>(
     DrawerMenuData(
         Icons.Outlined.HelpOutline,
         "Help & feedback"
+    ),
+)
+
+val bottomList= listOf<BottomNavData>(
+    BottomNavData(
+        Icons.Outlined.MailOutline,
+        Icons.Filled.Mail,
+        "Mail"
+    ),
+    BottomNavData(
+        Icons.Outlined.Chat,
+        Icons.Filled.Chat,
+        "Chat"
+    ),
+    BottomNavData(
+        Icons.Outlined.Group,
+        Icons.Filled.Group,
+        "Group"
+    ),
+    BottomNavData(
+        Icons.Outlined.Videocam,
+        Icons.Filled.Videocam,
+        "Meet"
     ),
 )
