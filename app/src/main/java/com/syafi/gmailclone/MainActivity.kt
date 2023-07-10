@@ -6,13 +6,13 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.syafi.gmailclone.presentation.DrawerMenu
 import com.syafi.gmailclone.presentation.TopBar
 import com.syafi.gmailclone.ui.theme.GmailCloneTheme
 
@@ -35,8 +35,15 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun App() {
+
+    val scaffoldState= rememberScaffoldState()
+    val scope= rememberCoroutineScope()
+    val scroll= rememberScrollState()
+
     Scaffold(
-        topBar = { TopBar() }
+        scaffoldState = scaffoldState,
+        topBar = { TopBar(scaffoldState, scope) },
+        drawerContent = { DrawerMenu(scroll) }
     ) {
         Box(modifier = Modifier.padding(it))
     }
