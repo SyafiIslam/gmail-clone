@@ -16,6 +16,7 @@ import com.syafi.gmailclone.presentation.BottomNav.BottomNav
 import com.syafi.gmailclone.presentation.DrawerMenu
 import com.syafi.gmailclone.presentation.TopBar
 import com.syafi.gmailclone.ui.theme.GmailCloneTheme
+import com.syafi.gmailclone.presentation.FloatingActionButton.FloatingActionButton
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +46,8 @@ fun App() {
         scaffoldState = scaffoldState,
         topBar = { TopBar(scaffoldState, scope) },
         drawerContent = { DrawerMenu(scroll, scaffoldState, scope) },
-        bottomBar = { BottomNav() }
+        bottomBar = { BottomNav() },
+        floatingActionButton = { FloatingActionButton() }
     ) {
         Box(modifier = Modifier.padding(it))
     }
