@@ -5,6 +5,7 @@ import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.outlined.*
 import com.syafi.gmailclone.model.BottomNavData
 import com.syafi.gmailclone.model.DrawerMenuData
+import com.syafi.gmailclone.model.MailData
 
 val drawerList = listOf<DrawerMenuData>(
     DrawerMenuData(
@@ -121,5 +122,98 @@ val bottomList= listOf<BottomNavData>(
         Icons.Outlined.Videocam,
         Icons.Filled.Videocam,
         "Meet"
+    ),
+)
+
+val mailList= listOf<MailData>(
+    MailData(
+        "Railway",
+        "Deploy Docker images, new Pricing",
+        "Its friday and you know what that means",
+        "July 4"
+    ),
+    MailData(
+        "Slack",
+        "You're invited: Slack pioneers of Champions",
+        "Learn how to top companies like google, meta, etc",
+        "August 14"
+    ),
+    MailData(
+        "PSIK FILKOM UB",
+        "Undangan Webinar TIF #41",
+        "Yth. Mahasiswa Program Studi Teknik Informatika",
+        "August 14"
+    ),
+    MailData(
+        "ResearchGate",
+        "Faizatul Amalia published an article",
+        "This week's research from your department",
+        "December 31"
+    ),
+    MailData(
+        "Github",
+        "[Github] An email address was arrested",
+        "Hey SyafIislam An email address",
+        "January 21"
+    ),
+    MailData(
+        "Netlify Team",
+        "More BIG News from Netlify",
+        "We are excited to announce that netlify",
+        "January 21"
+    ),
+    MailData(
+        "Taco from Trello",
+        "🔥 This just in: Trello Dark Mode",
+        "Plus, tips on better decision-making",
+        "March 9"
+    ),
+    MailData(
+        "Railway",
+        "Deploy Docker images, new Pricing",
+        "Its friday and you know what that means",
+        "July 4"
+    ),
+    MailData(
+        "Slack",
+        "You're invited: Slack pioneers of Champions",
+        "Learn how to top companies like google, meta, etc",
+        "August 14"
+    ),
+    MailData(
+        "PSIK FILKOM UB",
+        "Undangan Webinar TIF #41",
+        "Yth. Mahasiswa Program Studi Teknik Informatika",
+        "August 14"
+    ),
+    MailData(
+        "ResearchGate",
+        "Faizatul Amalia published an article",
+        "This week's research from your department",
+        "December 31"
+    ),
+    MailData(
+        "Github",
+        "[Github] An email address was arrested",
+        "Hey SyafIislam An email address",
+        "January 21"
+    ),
+    MailData(
+        "Netlify Team",
+        "More BIG News from Netlify",
+        "We are excited to announce that netlify",
+        "January 21"
+    ),
+    MailData(
+        "Taco from Trello",
+        "🔥 This just in: Trello Dark Mode",
+        "Plus, tips on better decision-making",
+        "March 9"
+    ),
+    MailData(
+        "Hello from Trello",
+        "🔥 This just in: Trello Dark Mode",
+        "Plus, tips on better decision-making",
+        "March 9"
     ),
 )

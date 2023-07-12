@@ -17,6 +17,7 @@ import com.syafi.gmailclone.presentation.DrawerMenu
 import com.syafi.gmailclone.presentation.TopBar
 import com.syafi.gmailclone.ui.theme.GmailCloneTheme
 import com.syafi.gmailclone.presentation.FloatingActionButton.FloatingActionButton
+import com.syafi.gmailclone.presentation.MailList.MailList
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,18 +39,24 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun App() {
 
-    val scaffoldState= rememberScaffoldState()
-    val scope= rememberCoroutineScope()
-    val scroll= rememberScrollState()
+    val scaffoldState = rememberScaffoldState()
+    val scope = rememberCoroutineScope()
+    val scroll = rememberScrollState()
 
     Scaffold(
         scaffoldState = scaffoldState,
         topBar = { TopBar(scaffoldState, scope) },
         drawerContent = { DrawerMenu(scroll, scaffoldState, scope) },
-        bottomBar = { BottomNav() },
+        bottomBar = {
+            if (scroll.isScrollInProgress) {
+                false
+            } else {
+                BottomNav()
+            }
+        },
         floatingActionButton = { FloatingActionButton() }
     ) {
-        Box(modifier = Modifier.padding(it))
+        MailList(padding = it, scroll)
     }
 }
 
