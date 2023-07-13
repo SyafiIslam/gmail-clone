@@ -3,6 +3,7 @@ package com.syafi.gmailclone.data
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.outlined.*
+import com.syafi.gmailclone.model.AccountData
 import com.syafi.gmailclone.model.BottomNavData
 import com.syafi.gmailclone.model.DrawerMenuData
 import com.syafi.gmailclone.model.MailData
@@ -215,5 +216,28 @@ val mailList= listOf<MailData>(
         "🔥 This just in: Trello Dark Mode",
         "Plus, tips on better decision-making",
         "March 9"
+    ),
+)
+
+val accountList= listOf<AccountData>(
+    AccountData(
+        "Muhammad Syafi islam",
+        "muhammadsyafi@student.ub.ac.id",
+        11
+    ),
+    AccountData(
+        "Muhammad Syafi",
+        "muhammadsyafiislam@gmail.com",
+        99
+    ),
+    AccountData(
+        "End 1902",
+        "mrend19022003@gmail.com",
+        30,
+    ),
+    AccountData(
+        "sapi",
+        "akunvalosapi@gmail.com",
+        8,
     ),
 )

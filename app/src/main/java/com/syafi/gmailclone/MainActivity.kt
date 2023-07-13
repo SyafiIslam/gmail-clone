@@ -3,13 +3,10 @@ package com.syafi.gmailclone
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.syafi.gmailclone.presentation.BottomNav.BottomNav
@@ -42,10 +39,13 @@ fun App() {
     val scaffoldState = rememberScaffoldState()
     val scope = rememberCoroutineScope()
     val scroll = rememberScrollState()
+    val openDialog= remember {
+        mutableStateOf(false)
+    }
 
     Scaffold(
         scaffoldState = scaffoldState,
-        topBar = { TopBar(scaffoldState, scope) },
+        topBar = { TopBar(scaffoldState = scaffoldState, scope = scope, dialog = openDialog) },
         drawerContent = { DrawerMenu(scroll, scaffoldState, scope) },
         bottomBar = {
             if (scroll.isScrollInProgress) {
